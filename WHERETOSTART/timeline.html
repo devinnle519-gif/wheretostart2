@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Timeline | Where to Start?</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-page="timeline">
+  <header class="site-header">
+    <div class="header-grid container">
+      <a class="nav-link" id="backToUniverse" href="universe.html" aria-label="Back to universes">
+        <span class="arrow">←</span>
+        <span class="brand-icon small">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <rect x="3" y="4" width="18" height="16" rx="2"></rect>
+            <line x1="8" y1="4" x2="8" y2="20"></line>
+            <line x1="16" y1="4" x2="16" y2="20"></line>
+            <line x1="3" y1="10" x2="21" y2="10"></line>
+            <line x1="3" y1="14" x2="21" y2="14"></line>
+          </svg>
+        </span>
+        <span>
+          <strong id="timelineTitle">Universe</strong>
+          <small id="timelineDescription">Description</small>
+        </span>
+      </a>
+
+      <a class="home-button" href="index.html" aria-label="Home">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M4 10.5 12 4l8 6.5"></path>
+          <path d="M6.5 10v9h11v-9"></path>
+        </svg>
+      </a>
+      <div></div>
+    </div>
+  </header>
+
+  <main class="page-shell">
+    <section class="container section-spacer">
+      <h1 class="content-heading">Watch Order</h1>
+
+      <div class="tab-row" id="tabRow" role="tablist" aria-label="Watch order tabs">
+        <button class="tab-button active" data-order="recommended">Recommended Order</button>
+        <button class="tab-button" data-order="release">Release Order</button>
+        <button class="tab-button" data-order="chronological">Chronological Order</button>
+      </div>
+
+      <p class="helper-text" id="orderDescription">
+        The best order for first-time viewers, optimizing story flow and reveals.
+      </p>
+
+      <div id="timelineTrack" class="timeline-track"></div>
+
+      <section class="legend-box">
+        <h2>Importance Guide</h2>
+        <div class="legend-grid">
+          <div class="legend-item"><span class="dot essential"></span><div><strong>Essential</strong><small>Critical to the story</small></div></div>
+          <div class="legend-item"><span class="dot recommended"></span><div><strong>Recommended</strong><small>Adds important context</small></div></div>
+          <div class="legend-item"><span class="dot optional"></span><div><strong>Optional</strong><small>Nice to have</small></div></div>
+          <div class="legend-item"><span class="dot skippable"></span><div><strong>Skippable</strong><small>Can be skipped</small></div></div>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <div id="modalOverlay" class="modal-overlay hidden">
+    <div class="modal-card">
+      <button class="close-modal" id="closeModal" aria-label="Close details">×</button>
+      <div class="modal-hero" id="modalHero"></div>
+      <div class="modal-body" id="modalBody"></div>
+    </div>
+  </div>
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
